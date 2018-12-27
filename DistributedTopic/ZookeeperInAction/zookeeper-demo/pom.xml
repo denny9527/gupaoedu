@@ -12,6 +12,7 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<curator-version>4.1.0</curator-version>
 	</properties>
 
 	<dependencies>
@@ -25,6 +26,23 @@
 			<groupId>org.apache.zookeeper</groupId>
 			<artifactId>zookeeper</artifactId>
 			<version>3.4.10</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.zookeeper</groupId>
+			<artifactId>zookeeper</artifactId>
+			<version>3.4.10</version>
+		</dependency>
+		
+		<dependency>
+    		<groupId>org.apache.curator</groupId>
+    		<artifactId>curator-recipes</artifactId>
+    		<version>${curator-version}</version>
+    		<exclusions>
+        		<exclusion>
+            		<groupId>org.apache.zookeeper</groupId>
+            		<artifactId>zookeeper</artifactId>
+        		</exclusion>
+    		</exclusions>
 		</dependency>
 	</dependencies>
 </project>
