@@ -1,5 +1,5 @@
 /**   
- * @Title: Curator.java 
+ * @Title: CuratorDemo.java 
  * @Package com.denny.zookeeper 
  * @Description: TODO
  * @author Zhangkui zhangkui_java@163.com   
@@ -12,21 +12,28 @@ import org.apache.curator.RetryPolicy;
 import org.apache.curator.framework.CuratorFramework;
 import org.apache.curator.framework.CuratorFrameworkFactory;
 import org.apache.curator.retry.ExponentialBackoffRetry;
+import org.apache.zookeeper.CreateMode;
+import org.apache.zookeeper.data.Stat;
 
 /** 
- * @ClassName: Curator 
+ * @ClassName: CuratorDemo 
  * @Description: TODO
  * @author Zhangkui zhangkui_java@163.com 
  * @date 2018年12月27日 下午3:51:30 
- * 使用Curator
+ * Curator业务场景
+ * 1、分布式锁
+ * 2、Leader选举
+ * 3、队列
+ * 4、共享
+ * 
  */
-public class Curator {
+public class CuratorDemo {
 
 	/** 
 	 * <p>Title: </p> 
 	 * <p>Description: </p>  
 	 */
-	public Curator() {
+	public CuratorDemo() {
 		// TODO Auto-generated constructor stub
 	}
 
@@ -46,11 +53,27 @@ public class Curator {
 							   .sessionTimeoutMs(4000)
 							   .connectionTimeoutMs(4000)
 							   .retryPolicy(retryPolicy)
+							   .namespace("curator")
 							   .build();
 	  
 		cf.start(); //开启客户端
-		cf.create().forPath("/denny-zk-df", "222".getBytes());
-		cf.checkExists().creatingParentsIfNeeded().forPath("/denny-zk-df/childNode01");
+		//创建节点：/curator/denny-zk-df/childNode01
+		//creatingParentsIfNeeded:原生API需要逐层创建节点，父节点必须存在子节点
+		
+		if(cf.checkExists().forPath("/denny-zk-df/childNode01") == null) {//判断节点是否存在
+			cf.create().creatingParentsIfNeeded()
+			   .withMode(CreateMode.PERSISTENT)
+			   .forPath("/denny-zk-df/childNode01");
+		}
+
+		//修改节点：/curator/denny-zk-df/childNode02
+		Stat stat = new Stat();
+		cf.getData().storingStatIn(stat).forPath("/denny-zk-df/childNode01");
+		cf.setData().withVersion(stat.getVersion()).forPath("/denny-zk-df/childNode01", "100".getBytes());
+		
+		//删除节点：/curator/denny-zk-df/childNode01
+		cf.delete().deletingChildrenIfNeeded().forPath("/denny-zk-df/childNode01");
+
 		cf.close(); //关闭客户端
 		
 	}
