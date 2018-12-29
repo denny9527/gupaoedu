@@ -13,6 +13,12 @@ import org.apache.curator.framework.CuratorFramework;
 import org.apache.curator.framework.CuratorFrameworkFactory;
 import org.apache.curator.framework.recipes.cache.NodeCache;
 import org.apache.curator.framework.recipes.cache.NodeCacheListener;
+import org.apache.curator.framework.recipes.cache.PathChildrenCache;
+import org.apache.curator.framework.recipes.cache.PathChildrenCacheEvent;
+import org.apache.curator.framework.recipes.cache.PathChildrenCacheListener;
+import org.apache.curator.framework.recipes.cache.TreeCache;
+import org.apache.curator.framework.recipes.cache.TreeCacheEvent;
+import org.apache.curator.framework.recipes.cache.TreeCacheListener;
 import org.apache.curator.retry.ExponentialBackoffRetry;
 
 /** 
@@ -51,7 +57,9 @@ public class CuratorWatcherDemo {
 							   .build();
 		cf.start();//客户端启动
 		
-		addListenerWithNodeCache(cf, "/denny-zk-df");
+		//addListenerWithNodeCache(cf, "/denny-zk-df");
+		//addListenerWithPathChildCache(cf, "/denny-zk-df");
+		addListenerWithTreeCache(cf, "/denny-zk-df");
 		
 		//cf.close();//客户端关闭
 		System.in.read();
@@ -67,6 +75,16 @@ public class CuratorWatcherDemo {
 	 * 
 	 */
 	
+	/**
+	 * 加入节点事件监听
+	 * @Title: addListenerWithNodeCache 
+	 * @Description: TODO 
+	 * @param @param cf
+	 * @param @param path
+	 * @param @throws Exception
+	 * @return void
+	 * @throws
+	 */
 	public static void addListenerWithNodeCache(CuratorFramework cf, String path) throws Exception {
 		final NodeCache nodeCache = new NodeCache(cf, path);
 		NodeCacheListener ncl = new NodeCacheListener() {
@@ -77,6 +95,7 @@ public class CuratorWatcherDemo {
 			 * @throws Exception 
 			 * @see org.apache.curator.framework.recipes.cache.NodeCacheListener#nodeChanged() 
 			 */
+			//节点的创建和更新
 			public void nodeChanged() throws Exception {
 				System.out.println("Receive Event "+nodeCache.getCurrentData().getPath());
 				
@@ -86,5 +105,68 @@ public class CuratorWatcherDemo {
 		nodeCache.start();
 	}
 	
+	/**
+	 * 加入子节点事件监听
+	 * @Title: addListenerWithPathChildCache 
+	 * @Description: TODO 
+	 * @param @param cf
+	 * @param @param path
+	 * @param @throws Exception
+	 * @return void
+	 * @throws
+	 */
+	public static void addListenerWithPathChildCache(CuratorFramework cf, String path) throws Exception {
+		final PathChildrenCache pathChildCache = new PathChildrenCache(cf, path, true);
+		PathChildrenCacheListener pccl = new PathChildrenCacheListener() {
 
+			/* (non-Javadoc) 
+			 * <p>Title: childEvent</p> 
+			 * <p>Description: </p> 
+			 * @param client
+			 * @param event
+			 * @throws Exception 
+			 * @see org.apache.curator.framework.recipes.cache.PathChildrenCacheListener#childEvent(org.apache.curator.framework.CuratorFramework, org.apache.curator.framework.recipes.cache.PathChildrenCacheEvent) 
+			 */
+			//子节点的创建、删除和更新
+			public void childEvent(CuratorFramework client, PathChildrenCacheEvent event) throws Exception {
+				System.out.println("Receive Event "+event.getData().getPath()+" Event Type "+event.getType());
+			}
+			
+		};
+		pathChildCache.getListenable().addListener(pccl);
+		pathChildCache.start();
+	}
+	
+	/**
+	 * @throws Exception 
+	 * 加入TreeCache监听
+	 * @Title: addListenerWithTreeCache 
+	 * @Description: TODO 
+	 * @param @param cf
+	 * @param @param path
+	 * @return void
+	 * @throws
+	 */
+	public static void addListenerWithTreeCache(CuratorFramework cf, String path) throws Exception {
+		final TreeCache treeCache = new TreeCache(cf, path);
+		TreeCacheListener tcl = new TreeCacheListener() {
+
+			/* (non-Javadoc) 
+			 * <p>Title: childEvent</p> 
+			 * <p>Description: </p> 
+			 * @param client
+			 * @param event
+			 * @throws Exception 
+			 * @see org.apache.curator.framework.recipes.cache.TreeCacheListener#childEvent(org.apache.curator.framework.CuratorFramework, org.apache.curator.framework.recipes.cache.TreeCacheEvent) 
+			 */
+			public void childEvent(CuratorFramework client, TreeCacheEvent event) throws Exception {
+				System.out.println("Receive Event "+event.getData().getPath()+" Event Type "+event.getType());
+				
+			}
+			
+		};
+		treeCache.getListenable().addListener(tcl);
+		treeCache.start();
+	}
+	
 }
