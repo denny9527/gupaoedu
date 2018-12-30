@@ -2,51 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="38a8b95b-0c44-471d-9bf5-62b36a518ca6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../dubbo-client/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../dubbo-client/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../dubbo-client/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../dubbo-client/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../dubbo-client/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../dubbo-client/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../dubbo-client/dubbo-client.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../dubbo-client/src/main/resources/dubbo-client.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../dubbo-client/src/main/resources/dubbo.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../dubbo-client/src/main/resources/log4j.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_dubbo_2_6_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_16_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_3_10_5_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_all_4_0_35_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jline_jline_0_9_94.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_3_8_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_16.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_curator_curator_client_2_12_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_curator_curator_framework_2_12_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_zookeeper_zookeeper_3_4_9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_20_0_GA.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_netty_netty_3_2_5_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_3_16_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_3_16_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_3_16_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_3_16_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_3_16_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dubbo-server.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server-api/server-api.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server-provider/src/main/java/com/denny/dubbo/Bootstrap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server-provider/src/main/resources/dubbo.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server-provider/src/main/resources/log4j.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dubbo-client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../dubbo-client/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dubbo-client/src/main/java/com/denny/dubbo/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../dubbo-client/src/main/java/com/denny/dubbo/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-api/src/main/java/com/denny/dubbo/IZkHello.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-api/src/main/java/com/denny/dubbo/IZkHello.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-provider/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server-provider/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-provider/src/main/java/com/denny/dubbo/impl/ZkHelloImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/server-provider/src/main/java/com/denny/dubbo/impl/ZkHelloImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server-provider/src/main/resources/dubbo-server.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server-provider/src/main/resources/dubbo-server.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ZookeeperInAction/zookeeper-demo/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ZookeeperInAction/zookeeper-demo/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dubbo-client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../dubbo-client/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dubbo-client/src/main/resources/dubbo-client.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../dubbo-client/src/main/resources/dubbo-client.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/server-provider/target/" />
@@ -141,7 +98,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546172124867" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546177247861" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -195,12 +152,12 @@
       <workItem from="1546148825154" duration="3321000" />
       <workItem from="1546153184505" duration="426000" />
       <workItem from="1546153863117" duration="5062000" />
-      <workItem from="1546162713908" duration="3383000" />
+      <workItem from="1546162713908" duration="3623000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12192000" />
+    <option name="totallyTimeSpent" value="12432000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -212,7 +169,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="25" width="1280" height="737" extended-state="6" />
+    <frame x="0" y="25" width="1280" height="737" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26171243" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
