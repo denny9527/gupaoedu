@@ -33,8 +33,8 @@ public class ZkHelloImpl implements IZkHello {
 	 * @param name 
 	 * @see com.denny.dubbo.IZkHello#hello(java.lang.String) 
 	 */
-	public void hello(String name) {
-		System.out.println("Hello: " + name);
+	public String hello(String name) {
+		return "Hello: " + name;
 	}
 
 	

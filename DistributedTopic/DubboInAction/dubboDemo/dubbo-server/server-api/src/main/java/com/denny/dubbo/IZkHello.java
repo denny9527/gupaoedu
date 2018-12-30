@@ -17,6 +17,6 @@ package com.denny.dubbo;
  */
 public interface IZkHello {
 
-	public abstract void hello(String name);
+	public abstract String hello(String name);
 	
 }
