@@ -8,9 +8,6 @@
 	
 	<!-- 提供方信息 -->
 	<dubbo:application name="dubbo-server" owner="denny"/>
-
-	<!-- 延迟服务发布
-	<dubbo:provider delay="0"></dubbo:provider> -->
 	
 	<!-- 注册中心 无注册中心
 	<dubbo:registry address="N/A"></dubbo:registry> -->
@@ -22,18 +19,12 @@
 	<dubbo:protocol name="dubbo" port="20880"></dubbo:protocol>
 
 	<dubbo:protocol name="hessian" port="8087"></dubbo:protocol>
-
-
-	<!-- version 多版本支持 -->
-	<dubbo:service interface="com.denny.dubbo.IZkHello" ref="zkHelloService" protocol="dubbo,hessian" version="1.0.0"/>
-
-	<bean id="zkHelloService" class="com.denny.dubbo.impl.ZkHelloImpl" ></bean>
-
-
-	<dubbo:service interface="com.denny.dubbo.IZkHello" ref="zkHelloServiceV2" protocol="dubbo,hessian" version="1.0.1"/>
-
-	<bean id="zkHelloServiceV2" class="com.denny.dubbo.impl.ZkHelloV2Impl" ></bean>
-
-
+	
+	<dubbo:service interface="com.denny.dubbo.IZkHello" ref="zkHelloService" protocol="dubbo,hessian"/>
+	
+	<bean id="zkHelloService" class="com.denny.dubbo.impl.ZkHelloImpl"></bean>
+	
+	
+	
 
 </beans>

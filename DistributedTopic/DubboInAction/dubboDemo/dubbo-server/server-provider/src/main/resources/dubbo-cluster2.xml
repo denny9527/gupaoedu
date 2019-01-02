@@ -8,32 +8,23 @@
 	
 	<!-- 提供方信息 -->
 	<dubbo:application name="dubbo-server" owner="denny"/>
-
-	<!-- 延迟服务发布
-	<dubbo:provider delay="0"></dubbo:provider> -->
 	
 	<!-- 注册中心 无注册中心
 	<dubbo:registry address="N/A"></dubbo:registry> -->
 
 	<!-- 注册中心 zookeeper注册-->
-	<dubbo:registry address="zookeeper://192.168.3.14:2181"></dubbo:registry>
+	<dubbo:registry id="registry2" address="zookeeper://192.168.3.14:2181"></dubbo:registry>
 
 	<!-- 多协议支持RMI、Hessian、Dubbo、Thrift -->
-	<dubbo:protocol name="dubbo" port="20880"></dubbo:protocol>
+	<dubbo:protocol name="dubbo" port="20882"></dubbo:protocol>
 
-	<dubbo:protocol name="hessian" port="8087"></dubbo:protocol>
+	<!-- <dubbo:protocol name="hessian" port="8087"></dubbo:protocol> -->
+	
+	<dubbo:service interface="com.denny.dubbo.IZkHello" ref="zkHelloService" protocol="dubbo"/>
 
-
-	<!-- version 多版本支持 -->
-	<dubbo:service interface="com.denny.dubbo.IZkHello" ref="zkHelloService" protocol="dubbo,hessian" version="1.0.0"/>
-
-	<bean id="zkHelloService" class="com.denny.dubbo.impl.ZkHelloImpl" ></bean>
-
-
-	<dubbo:service interface="com.denny.dubbo.IZkHello" ref="zkHelloServiceV2" protocol="dubbo,hessian" version="1.0.1"/>
-
-	<bean id="zkHelloServiceV2" class="com.denny.dubbo.impl.ZkHelloV2Impl" ></bean>
-
-
+	<bean id="zkHelloService" class="com.denny.dubbo.impl.ZkHelloCluster2Impl"></bean>
+	
+	
+	
 
 </beans>

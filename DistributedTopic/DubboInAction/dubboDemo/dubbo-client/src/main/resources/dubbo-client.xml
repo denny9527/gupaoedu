@@ -19,8 +19,26 @@
     <dubbo:reference id="zkHelloService" interface="com.denny.dubbo.IZkHello" url="dubbo://192.168.3.14:20880/com.denny.dubbo.IZkHello"></dubbo:reference>
     -->
 
-    <dubbo:reference id="zkHelloService" interface="com.denny.dubbo.IZkHello"></dubbo:reference>
+    <!-- 指定协议 protocol:duboo、hessian -->
+    <!-- check="false" 启动配置检查 解决循环依赖 -->
+    <!-- 容错机制 cluster：
+         failsafe 失败安全，可以以为是把错误吞掉（记录日志）
+         failover（默认）重试其他服务器。retries(重试次数)
+         failfast 快速失败。失败后立马返回，适用于是事物性服务
+         failback 失败后自动恢复
+         broadcast 广播，任意一台服务器报错，则执行的方法报错
+         forking  设置并行数 forks
+    -->
+    <!-- 服务多版本支持 version-->
 
+    <!-- 服务降级 保证核心服务正常运行 mock -->
+    <!-- 此时容错机制为：failsafe 错误被吞掉 直接返回null，即使设置了mock也不会执行
+    <dubbo:reference id="zkHelloService" interface="com.denny.dubbo.IZkHello" protocol="dubbo" version="1.0.1"
+    cluster="failsafe"
+                     timeout="1" mock="com.denny.dubbo.impl.ZkHelloMock"> </dubbo:reference> -->
 
-
+    <!-- 此时容错机制为：failover 执行超时重试，最终执行mock -->
+    <dubbo:reference id="zkHelloService" interface="com.denny.dubbo.IZkHello" protocol="dubbo" version="1.0.1"
+                     cluster="failover"
+                     timeout="1" mock="com.denny.dubbo.impl.ZkHelloMock"> </dubbo:reference>
 </beans>
