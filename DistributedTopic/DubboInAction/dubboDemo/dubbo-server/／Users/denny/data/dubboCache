@@ -1,0 +1,4 @@
+#Dubbo Registry Cache
+#Mon Jan 07 07:45:15 CST 2019
+com.denny.dubbo.IZkHello\:1.0.1=empty\://192.168.3.14\:8087/com.denny.dubbo.IZkHello2?anyhost\=true&application\=dubbo-server&bean.name\=com.denny.dubbo.IZkHello2&category\=configurators&check\=false&dubbo\=2.0.2&generic\=false&interface\=com.denny.dubbo.IZkHello&methods\=hello&owner\=denny&pid\=2437&revision\=1.0.1&side\=provider&timestamp\=1546611598242&version\=1.0.1
+com.denny.dubbo.IZkHello\:1.0.0=empty\://192.168.3.14\:20880/com.denny.dubbo.IZkHello?anyhost\=true&application\=dubbo-server&bean.name\=com.denny.dubbo.IZkHello&category\=configurators&check\=false&dubbo\=2.0.2&generic\=false&interface\=com.denny.dubbo.IZkHello&methods\=hello&owner\=denny&pid\=2477&revision\=1.0.0&side\=provider&timestamp\=1546611942639&version\=1.0.0

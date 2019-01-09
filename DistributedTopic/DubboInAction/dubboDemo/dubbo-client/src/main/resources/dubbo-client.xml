@@ -15,7 +15,7 @@
     <!-- 注册中心 zookeeper注册-->
     <dubbo:registry address="zookeeper://192.168.3.14:2181"></dubbo:registry>
 
-    <!-- 远程服务代理 无注册中心指定协议地址
+    <!-- 远程服务代理 无注册中心指定协议地址 配置url为无注册中心
     <dubbo:reference id="zkHelloService" interface="com.denny.dubbo.IZkHello" url="dubbo://192.168.3.14:20880/com.denny.dubbo.IZkHello"></dubbo:reference>
     -->
 
@@ -25,7 +25,7 @@
          failsafe 失败安全，可以以为是把错误吞掉（记录日志）
          failover（默认）重试其他服务器。retries(重试次数)
          failfast 快速失败。失败后立马返回，适用于是事物性服务
-         failback 失败后自动恢复
+         failback 失败后自动恢复.记录失败请求定时重发
          broadcast 广播，任意一台服务器报错，则执行的方法报错
          forking  设置并行数 forks
     -->
