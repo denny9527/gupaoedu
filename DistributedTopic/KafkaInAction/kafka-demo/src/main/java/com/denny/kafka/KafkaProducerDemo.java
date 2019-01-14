@@ -13,7 +13,9 @@ public class KafkaProducerDemo extends Thread {
 
     private String topic;
 
-    KafkaProducerDemo(String topic){
+    private String isAsyn; //是否异步发送
+
+   KafkaProducerDemo(String topic){
         this.topic = topic;
         Properties properties = new Properties();
         properties.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "192.168.3.14:9092,192.168.3.36:9092,192.168.3.37:9092");
@@ -21,6 +23,7 @@ public class KafkaProducerDemo extends Thread {
         properties.put(ProducerConfig.ACKS_CONFIG, "-1");
         properties.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.IntegerSerializer");
         properties.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");
+        properties.put(ProducerConfig.PARTITIONER_CLASS_CONFIG, "com.denny.kafka.CustPartition");//指定自定义分区策略
         this.producer = new KafkaProducer<Integer, String>(properties);
         this.topic = topic;
     }
@@ -40,7 +43,7 @@ public class KafkaProducerDemo extends Thread {
             this.producer.send(new ProducerRecord<Integer, String>(topic, message));
 
             try {
-                Thread.sleep(1000);
+                Thread.sleep(3000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

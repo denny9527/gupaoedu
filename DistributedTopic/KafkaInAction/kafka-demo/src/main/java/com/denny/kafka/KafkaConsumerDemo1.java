@@ -4,21 +4,19 @@ import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
-import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.common.TopicPartition;
-
 
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Properties;
 
-public class KafkaConsumerDemo extends Thread {
+public class KafkaConsumerDemo1 extends Thread {
 
     private KafkaConsumer<Integer, String> kafkaConsumer;
 
     private String topic;
 
-    public KafkaConsumerDemo(String topic) {
+    public KafkaConsumerDemo1(String topic) {
 
         Properties properties = new Properties();
         properties.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, "192.168.3.14:9092,192.168.3.36:9092,192.168.3.37:9092");
@@ -49,7 +47,6 @@ public class KafkaConsumerDemo extends Thread {
     }
 
     public static void main(String[] args){
-        new KafkaConsumerDemo("test").start();
-        //System.out.println("KafkaConsumerDemo1".hashCode() % 50);
+        new KafkaConsumerDemo1("test").start();
     }
 }
