@@ -1,0 +1,87 @@
+2019-01-22 17:55:27 729-->[main]--[ERROR]--[Client]--Connection refused (Connection refused)
+2019-01-22 17:57:47 260-->[main]--[ERROR]--[Client]--Connection refused (Connection refused)
+2019-01-22 17:58:48 298-->[Thread-1]--[INFO ]--[ServerHandler]--接受到的?容如下：
+2019-01-22 18:00:39 871-->[Thread-0]--[INFO ]--[Server]--ddd0.0.0.0
+2019-01-22 18:06:23 788-->[Thread-0]--[INFO ]--[Server]--服?端已??，端口?：7777
+2019-01-22 18:07:08 423-->[Thread-0]--[INFO ]--[Server]--服?端已??，端口?：7777
+2019-01-22 18:07:11 227-->[Thread-0]--[INFO ]--[Server]--服?端接受到客?端?求！
+2019-01-22 18:07:11 229-->[Thread-1]--[INFO ]--[ServerHandler]--接受到的?容如下：
+2019-01-22 18:09:04 579-->[Thread-0]--[INFO ]--[Server]--服?端已??，端口?：7777
+2019-01-22 18:09:07 345-->[Thread-0]--[INFO ]--[Server]--服?端接受到客?端?求！
+2019-01-22 18:09:07 833-->[Thread-1]--[INFO ]--[ServerHandler]--接受到的?容如下：
+2019-01-22 18:09:39 805-->[Thread-0]--[INFO ]--[Server]--服?端已??，端口?：7777
+2019-01-22 18:09:42 417-->[Thread-0]--[INFO ]--[Server]--服?端接受到客?端?求！
+2019-01-22 18:09:42 419-->[Thread-1]--[INFO ]--[ServerHandler]--接受到的?容如下：
+2019-01-22 18:09:51 717-->[Thread-0]--[INFO ]--[Server]--服?端已??，端口?：7777
+2019-01-22 18:09:54 348-->[Thread-0]--[INFO ]--[Server]--服?端接受到客?端?求！
+2019-01-22 18:09:54 356-->[Thread-1]--[INFO ]--[ServerHandler]--接受到的?容如下：
+2019-01-22 18:10:17 586-->[Thread-0]--[INFO ]--[Server]--服?端已??，端口?：7777
+2019-01-22 18:10:20 206-->[Thread-0]--[INFO ]--[Server]--服?端接受到客?端?求！
+2019-01-22 18:10:35 373-->[Thread-1]--[INFO ]--[ServerHandler]--接受到的?容如下：
+2019-01-22 18:12:23 161-->[Thread-0]--[INFO ]--[Server]--服?端已??，端口?：7777
+2019-01-22 18:12:25 933-->[Thread-0]--[INFO ]--[Server]--服?端接受到客?端?求！
+2019-01-22 18:12:25 935-->[Thread-1]--[INFO ]--[ServerHandler]--接受到的?容如下：
+2019-01-22 18:21:23 053-->[Thread-0]--[INFO ]--[Server]--服?端已??，端口?：7777
+2019-01-22 18:21:25 861-->[Thread-0]--[INFO ]--[Server]--服?端接受到客?端?求！
+2019-01-22 18:21:25 863-->[Thread-1]--[INFO ]--[ServerHandler]--接受到的?容如下：
+2019-01-22 18:22:52 788-->[Thread-0]--[INFO ]--[Server]--服?端已??，端口?：7777
+2019-01-22 18:22:55 544-->[Thread-0]--[INFO ]--[Server]--服?端接受到客?端?求！
+2019-01-22 18:22:55 545-->[Thread-1]--[INFO ]--[ServerHandler]--java.net.SocketInputStream@6fdab7a5
+2019-01-22 18:22:55 546-->[Thread-1]--[INFO ]--[ServerHandler]--接受到的?容如下：
+2019-01-22 18:23:30 185-->[Thread-0]--[INFO ]--[Server]--服?端已??，端口?：7777
+2019-01-22 18:23:32 970-->[Thread-0]--[INFO ]--[Server]--服?端接受到客?端?求！
+2019-01-22 18:23:32 973-->[Thread-1]--[INFO ]--[ServerHandler]--接受到的?容如下：
+2019-01-22 18:23:44 619-->[Thread-0]--[INFO ]--[Server]--服?端已??，端口?：7777
+2019-01-22 18:23:47 351-->[Thread-0]--[INFO ]--[Server]--服?端接受到客?端?求！
+2019-01-22 18:24:51 645-->[Thread-1]--[INFO ]--[ServerHandler]--接受到的?容如下：
+2019-01-22 18:26:49 331-->[Thread-0]--[INFO ]--[Server]--服?端已??，端口?：7777
+2019-01-22 18:26:52 115-->[Thread-0]--[INFO ]--[Server]--服?端接受到客?端?求！
+2019-01-22 18:26:52 117-->[Thread-1]--[INFO ]--[ServerHandler]--接受到的?容如下：
+2019-01-22 18:26:52 119-->[Thread-1]--[INFO ]--[ServerHandler]--hello world!
+
+2019-01-22 18:28:02 478-->[Thread-0]--[INFO ]--[Server]--服?端已??，端口?：7777
+2019-01-22 18:28:05 258-->[Thread-0]--[INFO ]--[Server]--服?端接受到客?端?求！
+2019-01-22 18:28:05 260-->[Thread-1]--[INFO ]--[ServerHandler]--接受到的?容如下：
+2019-01-22 18:28:05 262-->[Thread-1]--[INFO ]--[ServerHandler]--hello world!
+
+2019-01-22 18:28:51 661-->[Thread-0]--[INFO ]--[Server]--服?端已??，端口?：7777
+2019-01-22 18:28:54 460-->[Thread-0]--[INFO ]--[Server]--服?端接受到客?端?求！
+2019-01-22 18:28:54 462-->[Thread-1]--[INFO ]--[ServerHandler]--接受到的?容如下：
+2019-01-22 18:28:54 463-->[Thread-1]--[INFO ]--[ServerHandler]--hello world!
+
+2019-01-22 18:29:02 929-->[Thread-0]--[INFO ]--[Server]--服?端已??，端口?：7777
+2019-01-22 18:29:05 411-->[Thread-0]--[INFO ]--[Server]--服?端接受到客?端?求！
+2019-01-22 18:29:08 258-->[Thread-1]--[INFO ]--[ServerHandler]--接受到的?容如下：
+2019-01-22 18:29:11 715-->[Thread-1]--[INFO ]--[ServerHandler]--hello world!
+
+2019-01-22 18:32:33 158-->[Thread-0]--[INFO ]--[Server]--服?端已??，端口?：7777
+2019-01-22 18:32:35 959-->[Thread-0]--[INFO ]--[Server]--服?端接受到客?端?求！
+2019-01-22 18:32:35 962-->[Thread-1]--[INFO ]--[ServerHandler]--接受到的?容如下：
+2019-01-22 18:32:35 964-->[Thread-1]--[INFO ]--[ServerHandler]--hello world!
+
+2019-01-22 18:33:13 500-->[Thread-0]--[INFO ]--[Server]--服?端已??，端口?：7777
+2019-01-22 18:33:16 207-->[Thread-0]--[INFO ]--[Server]--服?端接受到客?端?求！
+2019-01-22 18:33:16 295-->[Thread-1]--[INFO ]--[ServerHandler]--接受到的?容如下：
+2019-01-22 18:33:29 491-->[Thread-1]--[INFO ]--[ServerHandler]--hello world!
+
+2019-01-22 18:34:03 567-->[Thread-0]--[INFO ]--[Server]--服?端已??，端口?：7777
+2019-01-22 18:34:06 235-->[Thread-0]--[INFO ]--[Server]--服?端接受到客?端?求！
+2019-01-22 18:34:20 578-->[Thread-1]--[INFO ]--[ServerHandler]--接受到的?容如下：
+2019-01-22 18:34:20 582-->[Thread-1]--[INFO ]--[ServerHandler]--hello world!
+
+2019-01-22 18:37:17 435-->[Thread-0]--[INFO ]--[Server]--服?端已??，端口?：7777
+2019-01-22 18:37:20 188-->[Thread-0]--[INFO ]--[Server]--服?端接受到客?端?求！
+2019-01-22 18:37:27 454-->[Thread-1]--[INFO ]--[ServerHandler]--接受到的?容如下：
+2019-01-22 18:37:27 457-->[Thread-1]--[INFO ]--[ServerHandler]--hello world!
+
+2019-01-22 18:37:34 812-->[Thread-0]--[INFO ]--[Server]--服?端已??，端口?：7777
+2019-01-22 18:37:37 561-->[Thread-0]--[INFO ]--[Server]--服?端接受到客?端?求！
+2019-01-22 18:37:37 568-->[Thread-1]--[INFO ]--[ServerHandler]--接受到的?容如下：
+2019-01-22 18:37:37 569-->[Thread-1]--[INFO ]--[ServerHandler]--hello world!
+
+2019-01-22 18:39:26 416-->[Thread-0]--[INFO ]--[Server]--服?端已??，端口?：7777
+2019-01-22 18:39:29 227-->[Thread-0]--[INFO ]--[Server]--服?端接受到客?端?求！
+2019-01-22 18:39:29 228-->[Thread-1]--[INFO ]--[ServerHandler]--接受到的?容如下：
+2019-01-22 18:39:29 230-->[Thread-1]--[INFO ]--[ServerHandler]--hello world!
+
+2019-01-22 18:39:29 230-->[main]--[INFO ]--[Client]--接受到的?果?：hello world!

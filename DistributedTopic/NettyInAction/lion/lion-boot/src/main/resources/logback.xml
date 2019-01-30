@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="false">
+
+    <!-- 尽量别用绝对路径，如果带参数不同容器路径解释可能不同,以下配置参数在pom.xml里 -->
+    <property name="log.root.level" value="${log.root.level}"/> <!-- 日志级别 -->
+    <property name="log.home" value="${log.home}"/>  <!-- 日志路径，这里是相对路径， -->
+
+    <!-- app log -->
+    <appender name="LION_APPENDER" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${log.home}/lion.log</file>
+        <append>true</append>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${log.home}/LION.log.%d{yyyy-MM-dd}
+            </fileNamePattern>
+            <maxHistory>10</maxHistory>
+        </rollingPolicy>
+        <encoder charset="UTF-8">
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} - [%thread] %-5level - %logger{35} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- info log -->
+    <appender name="LION_INFO_APPENDER" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${log.home}/info-lion.log</file>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>info</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+        <append>true</append>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${log.home}/info-lion.log.%d{yyyy-MM-dd}
+            </fileNamePattern>
+            <maxHistory>3</maxHistory>
+        </rollingPolicy>
+        <encoder charset="UTF-8">
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} - [%thread] %-5level - %logger{35} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- debug log -->
+    <appender name="LION_DEBUG_APPENDER" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${log.home}/debug-lion.log</file>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>debug</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+        <append>true</append>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${log.home}/debug-lion.log.%d{yyyy-MM-dd}
+            </fileNamePattern>
+            <maxHistory>3</maxHistory>
+        </rollingPolicy>
+        <encoder charset="UTF-8">
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} - [%thread] %-5level - %logger{35} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- monitor log -->
+    <appender name="MONITOR_APPENDER" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${log.home}/monitor-lion.log</file>
+        <append>true</append>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${log.home}/monitor-lion.log.%d{yyyy-MM-dd}
+            </fileNamePattern>
+            <maxHistory>5</maxHistory>
+        </rollingPolicy>
+        <encoder charset="UTF-8">
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- connection log -->
+    <appender name="CONNECTION_APPENDER" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${log.home}/conn-lion.log</file>
+        <append>true</append>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${log.home}/conn-lion.log.%d{yyyy-MM-dd}
+            </fileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <encoder charset="UTF-8">
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- push log -->
+    <appender name="PUSH_APPENDER" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${log.home}/push-lion.log</file>
+        <append>true</append>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${log.home}/push-lion.log.%d{yyyy-MM-dd}
+            </fileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <encoder charset="UTF-8">
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- heartbeat log -->
+    <appender name="HEARTBEAT_APPENDER" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${log.home}/heartbeat-lion.log</file>
+        <append>true</append>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${log.home}/heartbeat-lion.log.%d{yyyy-MM-dd}
+            </fileNamePattern>
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <encoder charset="UTF-8">
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- cache log -->
+    <appender name="CACHE_APPENDER" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${log.home}/cache-lion.log</file>
+        <append>true</append>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${log.home}/cache-lion.log.%d{yyyy-MM-dd}
+            </fileNamePattern>
+            <maxHistory>5</maxHistory>
+        </rollingPolicy>
+        <encoder charset="UTF-8">
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- http log -->
+    <appender name="HTTP_APPENDER" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${log.home}/http-lion.log</file>
+        <append>true</append>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${log.home}/http-lion.log.%d{yyyy-MM-dd}
+            </fileNamePattern>
+            <maxHistory>5</maxHistory>
+        </rollingPolicy>
+        <encoder charset="UTF-8">
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- SRD log -->
+    <appender name="SRD_APPENDER" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${log.home}/srd-lion.log</file>
+        <append>true</append>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${log.home}/srd-lion.log.%d{yyyy-MM-dd}
+            </fileNamePattern>
+            <maxHistory>10</maxHistory>
+        </rollingPolicy>
+        <encoder charset="UTF-8">
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- profile log -->
+    <appender name="PROFILE_APPENDER" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${log.home}/profile-lion.log</file>
+        <append>true</append>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${log.home}/profile-lion.log.%d{yyyy-MM-dd}
+            </fileNamePattern>
+            <maxHistory>10</maxHistory>
+        </rollingPolicy>
+        <encoder charset="UTF-8">
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <target>System.out</target>
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>DEBUG</level>
+        </filter>
+        <encoder charset="UTF-8">
+            <pattern>%d{HH:mm:ss.SSS} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <root>
+        <level value="${log.root.level}"/>
+        <appender-ref ref="LION_APPENDER"/>
+        <appender-ref ref="LION_INFO_APPENDER"/>
+        <appender-ref ref="LION_DEBUG_APPENDER"/>
+    </root>
+
+    <logger name="console" additivity="false">
+        <level value="debug"/>
+        <appender-ref ref="STDOUT"/>
+    </logger>
+    <logger name="LION.conn.log" additivity="false">
+        <level value="debug"/>
+        <appender-ref ref="CONNECTION_APPENDER"/>
+    </logger>
+    <logger name="LION.heartbeat.log" additivity="false">
+        <level value="debug"/>
+        <appender-ref ref="HEARTBEAT_APPENDER"/>
+    </logger>
+    <logger name="LION.http.log" additivity="false">
+        <level value="debug"/>
+        <appender-ref ref="HTTP_APPENDER"/>
+    </logger>
+    <logger name="LION.monitor.log" additivity="false">
+        <level value="debug"/>
+        <appender-ref ref="MONITOR_APPENDER"/>
+    </logger>
+    <logger name="LION.push.log" additivity="false">
+        <level value="debug"/>
+        <appender-ref ref="PUSH_APPENDER"/>
+    </logger>
+    <logger name="LION.cache.log" additivity="false">
+        <level value="debug"/>
+        <appender-ref ref="CACHE_APPENDER"/>
+    </logger>
+    <logger name="LION.srd.log" additivity="false">
+        <level value="debug"/>
+        <appender-ref ref="SRD_APPENDER"/>
+    </logger>
+    <logger name="LION.profile.log" additivity="false">
+        <level value="debug"/>
+        <appender-ref ref="PROFILE_APPENDER"/>
+    </logger>
+
+    <logger name="org.apache.zookeeper.ClientCnxn" additivity="false">
+        <level value="warn"/>
+        <appender-ref ref="LION_APPENDER"/>
+    </logger>
+</configuration>
