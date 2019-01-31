@@ -10,5 +10,8 @@
         <module name="netty-study" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="netty-study" target="1.7" />
+    </bytecodeTargetLevel>
   </component>
 </project>
