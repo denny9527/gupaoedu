@@ -13,7 +13,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>user-api</module>
-        <module>user-consumer</module>
+        <module>user-service-consumer</module>
         <module>user-service-provider</module>
     </modules>
 
