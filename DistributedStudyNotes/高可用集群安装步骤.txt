@@ -1,0 +1,239 @@
+
+安装环境
+Centos-7
+
+三台虚拟机
+192.168.8.150（磁盘节点）
+192.168.8.45 （内存节点）
+192.168.8.40 （内存节点）
+
+一、安装Erlang
+1、erlang 下载地址：
+http://www.rabbitmq.com/releases/erlang/
+
+2、创建目录
+mkdir -p /usr/local/tools/rabbitmq
+cd /usr/local/tools/rabbitmq
+
+3、下载安装包
+wget http://www.rabbitmq.com/releases/erlang/erlang-19.0.4-1.el6.x86_64.rpm
+
+4、安装
+rpm -ivh erlang-19.0.4-1.el6.x86_64.rpm
+
+二、安装RabbitMQ
+1、rabbitMQ 下载地址
+https://dl.bintray.com/rabbitmq/rabbitmq-server-rpm/
+
+2、下载安装包
+wget https://dl.bintray.com/rabbitmq/rabbitmq-server-rpm/rabbitmq-server-3.6.12-1.el6.noarch.rpm
+rpm --import https://www.rabbitmq.com/rabbitmq-release-signing-key.asc
+
+3、安装
+rpm -ivh rabbitmq-server-3.6.12-1.el6.noarch.rpm
+
+问题解决
+1、错误：依赖检测失败：
+        socat 被 rabbitmq-server-3.6.12-1.el6.noarch 需要
+解决报错：
+ wget –no-cache http://www.convirture.com/repos/definitions/rhel/6.x/convirt.repo -O /etc/yum.repos.d/convirt.repo
+ yum makecache -y
+ yum install socat -y
+
+2、如果yum源有问题，无法安装：将CentOS的yum源更换为国内的阿里云源
+使用yum时File contains no section headers.解决办法
+http://xiaojingjing.iteye.com/blog/2393165
+ rm -f /etc/yum.repos.d/*
+ wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo
+ yum clean all
+
+三、集群配置
+1、hosts配置
+三台机器的hosts都配置
+vim /etc/hosts
+192.168.8.150 rabbit1 （磁盘节点）
+192.168.8.45 rabbit2（内存节点）
+192.168.8.40 rabbit3（内存节点）
+
+2、同步.erlang.cookie
+保持三台机器的.erlang.cookie同步
+/var/lib/rabbitmq/.erlang.cookie
+
+在第二台机器8.45执行：
+scp .erlang.cookie root@192.168.8.45:/var/lib/rabbitmq/
+chown rabbitmq:rabbitmq .erlang.cookie
+
+在第三台机器8.40执行：
+scp .erlang.cookie root@192.168.8.40:/var/lib/rabbitmq/
+chown rabbitmq:rabbitmq .erlang.cookie
+
+重启服务
+systemctl stop rabbitmq-server.service
+systemctl start rabbitmq-server.service
+
+或：systemctl restart rabbitmq-server.service
+查看服务状态：systemctl status rabbitmq-server.service
+
+如果启动报错：
+Job for rabbitmq-server.service failed because the control process exited with error code. See "systemctl status rabbitmq-server.service" and "journalctl -xe" for details.
+
+如果是因为服务停不掉，就要kill 端口。
+
+3、加入集群
+首先开放集群通信端口：
+# firewall-cmd --permanent --add-port={5672/tcp,4369/tcp,25672/tcp}
+# firewall-cmd --reload
+setsebool -P nis_enabled 1
+
+在第二台45，第三台机,40上执行：
+rabbitmqctl stop_app
+rabbitmqctl reset
+rabbitmqctl join_cluster rabbit@rabbit1 --ram 
+
+创建用户：三台服务器都执行
+ firewall-cmd --permanent --add-port=15672/tcp
+ firewall-cmd –-reload
+ rabbitmqctl add_user admin admin
+ rabbitmqctl set_user_tags admin administrator
+ rabbitmqctl set_permissions -p / admin ".*" ".*" ".*"
+
+4、
+RabbitMQ镜像队列
+可以参考：
+https://www.cnblogs.com/saneri/p/7798251.html
+
+
+5、HAProxy + Keepalived 高可用方案
+
+一、HAProxy
+将5672端口映射为5673端口，15672端口映射为15673端口。
+
+1)在两个内存节点上安装HAProxy
+yum install haproxy
+
+2)编辑配置文件
+vim /etc/haproxy/haproxy.cfg
+
+内容修改为：
+global
+    log         127.0.0.1 local2
+    chroot      /var/lib/haproxy
+    pidfile     /var/run/haproxy.pid
+    maxconn     4000
+    user        haproxy
+    group       haproxy
+    daemon
+    stats socket /var/lib/haproxy/stats
+	
+defaults
+    log                     global
+    option                  dontlognull
+    option                  redispatch
+    retries                 3
+    timeout connect         10s
+    timeout client          1m
+    timeout server          1m
+    maxconn                 3000
+	
+listen http_front
+        mode http
+        bind 0.0.0.0:1080           #监听端口
+        stats refresh 30s           #统计页面自动刷新时间
+        stats uri /haproxy?stats    #统计页面url
+        stats realm Haproxy Manager #统计页面密码框上提示文本
+        stats auth admin:123456     #统计页面用户名和密码设置
+		
+listen rabbitmq_admin
+    bind 0.0.0.0:15673
+    server node1 192.168.8.40:15672
+    server node2 192.168.8.45:15672
+	
+listen rabbitmq_cluster 0.0.0.0:5673
+    mode tcp
+    balance roundrobin
+    timeout client 3h
+    timeout server 3h
+    timeout connect 3h
+    server   node1 192.168.8.40:5672 check inter 5s rise 2 fall 3
+    server   node2 192.168.8.45:5672 check inter 5s rise 2 fall 3
+
+3)启动HAProxy
+haproxy -f /etc/haproxy/haproxy.cfg
+
+二、在两个内存节点上安装Keepalived
+ VIP 为 192.168.8.201
+
+1)安装Keepalived
+yum -y install keepalived
+
+2)修改配置文件
+vim /etc/keepalived/keepalived.conf
+
+内容改成（物理网卡和当前主机IP要修改）：
+global_defs {
+   notification_email {
+     acassen@firewall.loc
+     failover@firewall.loc
+     sysadmin@firewall.loc
+   }
+   notification_email_from Alexandre.Cassen@firewall.loc
+   smtp_server 192.168.200.1
+   smtp_connect_timeout 30
+   router_id LVS_DEVEL
+   vrrp_skip_check_adv_addr
+   # vrrp_strict    # 注释掉，不然访问不到VIP
+   vrrp_garp_interval 0
+   vrrp_gna_interval 0
+}
+global_defs {
+   notification_email {
+     acassen@firewall.loc
+     failover@firewall.loc
+     sysadmin@firewall.loc
+   }
+   notification_email_from Alexandre.Cassen@firewall.loc
+   smtp_server 192.168.200.1
+   smtp_connect_timeout 30
+   router_id LVS_DEVEL
+   vrrp_skip_check_adv_addr
+   # vrrp_strict    # 注释掉，不然访问不到VIP
+   vrrp_garp_interval 0
+   vrrp_gna_interval 0
+}
+
+# 检测任务
+vrrp_script check_haproxy {
+    # 检测HAProxy监本
+    script "/etc/keepalived/script/check_haproxy.sh"
+    # 每隔两秒检测
+    interval 2
+    # 权重
+    weight 2
+}
+
+# 虚拟组
+vrrp_instance haproxy {
+    state MASTER # 此处为`主`，备机是 `BACKUP`【此处要修改】
+    interface ens33 # 物理网卡，根据情况而定 【此处要修改】
+    mcast_src_ip 192.168.8.40 # 当前主机ip 【此处要修改】
+    virtual_router_id 51 # 虚拟路由id，同一个组内需要相同
+    priority 100 # 主机的优先权要比备机高
+    advert_int 1 # 心跳检查频率，单位：秒
+    authentication { # 认证，组内的要相同
+        auth_type PASS
+        auth_pass 1111
+    }
+    # 调用脚本
+    track_script {
+        check_haproxy
+    }
+    # 虚拟ip，多个换行
+    virtual_ipaddress {
+        192.168.8.201
+    }
+}
+
+3)启动keepalived
+keepalived -D
+
+

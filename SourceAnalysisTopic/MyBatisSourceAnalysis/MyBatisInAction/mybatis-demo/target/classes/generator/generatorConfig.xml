@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <classPathEntry location="/Users/denny/Documents/gupaoedu/SourceAnalysisTopic/MyBatisSourceAnalysis/MyBatisInAction/mybatis-demo/src/main/resources/generator/mysql-connector-java-5.1.8.jar"/>
+    <context id="MysqlTables" targetRuntime="MyBatis3">
+        <!--去除注释  -->
+        <commentGenerator>
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>
+
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://192.168.3.37:3306/denny-test?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC"
+                        userId="denny"
+                        password="19830203">
+        </jdbcConnection>
+
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="false"/>
+        </javaTypeResolver>
+
+        <javaModelGenerator targetPackage="com.denny.mybatis.beans" targetProject="/Users/denny/Documents/gupaoedu/SourceAnalysisTopic/MyBatisSourceAnalysis/MyBatisInAction/mybatis-demo/src/main/java">
+            <property name="enableSubPackages" value="true"/>
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+
+        <sqlMapGenerator targetPackage="xml" targetProject="/Users/denny/Documents/gupaoedu/SourceAnalysisTopic/MyBatisSourceAnalysis/MyBatisInAction/mybatis-demo/src/main/resources">
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
+
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.denny.mybatis.mapper" targetProject="/Users/denny/Documents/gupaoedu/SourceAnalysisTopic/MyBatisSourceAnalysis/MyBatisInAction/mybatis-demo/src/main/java">
+            <property name="enableSubPackages" value="true"/>
+        </javaClientGenerator>
+
+
+        <table schema="denny-test" tableName="test" domainObjectName="Test">
+            <property name="useActualColumnNames" value="false"/>
+        </table>
+
+        <table schema="denny-test" tableName="posts" domainObjectName="Posts">
+            <property name="useActualColumnNames" value="false"/>
+        </table>
+
+    </context>
+</generatorConfiguration>

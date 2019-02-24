@@ -2,11 +2,65 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dfb90fcd-ed63-4492-8636-d028b5c413fe" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../dubbo-server/server-provider/src/main/java/com/denny/dubbo/Protocol$Adaptive.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../MicroserviceTopic/microservice-project/spring-cloud-project/spring-cloud-feign/person-servcie-client/src/main/java/com/denny/microservice/person/feign/client/ribbon/CustomConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../SourceAnalysisTopic/MyBatisSourceAnalysis/MyBatisInAction/mybatis-demo/src/main/resources/xml/PostsMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../SourceAnalysisTopic/MyBatisSourceAnalysis/MyBatisInAction/mybatis-demo/src/main/resources/xml/TestMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../SourceAnalysisTopic/SpringDesignPatterns/spring-design-pattern/src/main/java/com/denny/spring/design/pattern/singleton/LazySingletonInner.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../SourceAnalysisTopic/SpringDesignPatterns/spring-design-pattern/src/main/java/com/denny/spring/design/pattern/singleton/SinglegonRegister.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../SourceAnalysisTopic/SpringDesignPatterns/spring-design-pattern/src/main/java/com/denny/spring/design/pattern/singleton/SingletonNoReflectAttack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../SourceAnalysisTopic/SpringDesignPatterns/spring-design-pattern/src/main/java/com/denny/spring/design/pattern/singleton/SingletonSerialization.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../SourceAnalysisTopic/SpringDesignPatterns/spring-design-pattern/src/main/java/com/denny/spring/design/pattern/singleton/SingletonTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/dubbo-client.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/dubbo-client.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../dubbo-server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../dubbo-server/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dubbo-server/server-provider/src/main/resources/dubbo-server.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../dubbo-server/server-provider/src/main/resources/dubbo-server.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dubbo-server/／Users/denny/data/dubboCache" beforeDir="false" afterPath="$PROJECT_DIR$/../dubbo-server/／Users/denny/data/dubboCache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MicroserviceTopic/demo/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MicroserviceTopic/demo/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MicroserviceTopic/demo/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MicroserviceTopic/demo/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MicroserviceTopic/demo/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MicroserviceTopic/demo/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MicroserviceTopic/demo/src/main/java/com/example/demo/DemoApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MicroserviceTopic/demo/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MicroserviceTopic/demo/src/test/java/com/example/demo/DemoApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MicroserviceTopic/demodd/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MicroserviceTopic/demodd/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MicroserviceTopic/demodd/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MicroserviceTopic/demodd/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MicroserviceTopic/demodd/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MicroserviceTopic/demodd/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MicroserviceTopic/demodd/src/main/java/com/example/demodd/DemoddApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MicroserviceTopic/demodd/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MicroserviceTopic/demodd/src/test/java/com/example/demodd/DemoddApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MicroserviceTopic/microservice-project/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../MicroserviceTopic/microservice-project/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MicroserviceTopic/microservice-project/spring-cloud-project/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../MicroserviceTopic/microservice-project/spring-cloud-project/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MicroserviceTopic/microservice-project/spring-cloud-project/spring-cloud-config-client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../MicroserviceTopic/microservice-project/spring-cloud-project/spring-cloud-config-client/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MicroserviceTopic/microservice-project/spring-cloud-project/spring-cloud-config-client/src/main/java/com/denny/microservice/config/client/controller/IndexCotroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../MicroserviceTopic/microservice-project/spring-cloud-project/spring-cloud-config-client/src/main/java/com/denny/microservice/config/client/controller/IndexCotroller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MicroserviceTopic/microservice-project/spring-cloud-project/spring-cloud-config-client/src/main/resources/bootstrap.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../MicroserviceTopic/microservice-project/spring-cloud-project/spring-cloud-config-client/src/main/resources/bootstrap.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MicroserviceTopic/microservice-project/spring-cloud-project/spring-cloud-config-client/target/classes/bootstrap.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../MicroserviceTopic/microservice-project/spring-cloud-project/spring-cloud-config-client/target/classes/bootstrap.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MicroserviceTopic/microservice-project/spring-cloud-project/spring-cloud-config-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../MicroserviceTopic/microservice-project/spring-cloud-project/spring-cloud-config-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MicroserviceTopic/microservice-project/spring-cloud-project/spring-cloud-config-server/src/main/java/com/denny/microservice/config/server/SpringCloudConfigServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../MicroserviceTopic/microservice-project/spring-cloud-project/spring-cloud-config-server/src/main/java/com/denny/microservice/config/server/SpringCloudConfigServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MicroserviceTopic/microservice-project/spring-cloud-project/spring-cloud-config-server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../MicroserviceTopic/microservice-project/spring-cloud-project/spring-cloud-config-server/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MicroserviceTopic/microservice-project/spring-cloud-project/spring-cloud-config-server/src/main/resources/configs/config-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../MicroserviceTopic/microservice-project/spring-cloud-project/spring-cloud-config-server/src/main/resources/configs/config-dev.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MicroserviceTopic/microservice-project/spring-cloud-project/spring-cloud-config-server/src/main/resources/configs/config-test.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../MicroserviceTopic/microservice-project/spring-cloud-project/spring-cloud-config-server/src/main/resources/configs/config-test.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MicroserviceTopic/microservice-project/spring-cloud-project/spring-cloud-config-server/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../MicroserviceTopic/microservice-project/spring-cloud-project/spring-cloud-config-server/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MicroserviceTopic/microservice-project/spring-cloud-project/spring-cloud-config-server/target/classes/configs/config-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../MicroserviceTopic/microservice-project/spring-cloud-project/spring-cloud-config-server/target/classes/configs/config-dev.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MicroserviceTopic/microservice-project/spring-cloud-project/spring-cloud-config-server/target/classes/configs/config-test.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../MicroserviceTopic/microservice-project/spring-cloud-project/spring-cloud-config-server/target/classes/configs/config-test.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MicroserviceTopic/microservice-project/spring-cloud-project/spring-cloud-eureka-server/src/main/resources/application-peer1.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../MicroserviceTopic/microservice-project/spring-cloud-project/spring-cloud-eureka-server/src/main/resources/application-peer1.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MicroserviceTopic/microservice-project/spring-cloud-project/spring-cloud-eureka-server/src/main/resources/application-peer2.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../MicroserviceTopic/microservice-project/spring-cloud-project/spring-cloud-eureka-server/src/main/resources/application-peer2.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MicroserviceTopic/microservice-project/spring-cloud-project/spring-cloud-eureka-server/target/classes/application-peer1.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../MicroserviceTopic/microservice-project/spring-cloud-project/spring-cloud-eureka-server/target/classes/application-peer1.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MicroserviceTopic/microservice-project/spring-cloud-project/spring-cloud-eureka-server/target/classes/application-peer2.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../MicroserviceTopic/microservice-project/spring-cloud-project/spring-cloud-eureka-server/target/classes/application-peer2.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MicroserviceTopic/microservice-project/spring-cloud-project/spring-cloud-feign/person-api/src/main/java/com/denny/microservice/spring/cloud/feign/api/service/PersonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../MicroserviceTopic/microservice-project/spring-cloud-project/spring-cloud-feign/person-api/src/main/java/com/denny/microservice/spring/cloud/feign/api/service/PersonService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MicroserviceTopic/microservice-project/spring-cloud-project/spring-cloud-feign/person-api/target/classes/com/denny/microservice/spring/cloud/feign/api/service/PersonService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../MicroserviceTopic/microservice-project/spring-cloud-project/spring-cloud-feign/person-api/target/classes/com/denny/microservice/spring/cloud/feign/api/service/PersonService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MicroserviceTopic/microservice-project/spring-cloud-project/spring-cloud-feign/person-servcie-client/src/main/java/com/denny/microservice/person/feign/client/SpringCloudFeignClientApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../MicroserviceTopic/microservice-project/spring-cloud-project/spring-cloud-feign/person-servcie-client/src/main/java/com/denny/microservice/person/feign/client/SpringCloudFeignClientApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MicroserviceTopic/microservice-project/spring-cloud-project/spring-cloud-feign/person-servcie-client/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../MicroserviceTopic/microservice-project/spring-cloud-project/spring-cloud-feign/person-servcie-client/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MicroserviceTopic/microservice-project/spring-cloud-project/spring-cloud-feign/person-servcie-client/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../MicroserviceTopic/microservice-project/spring-cloud-project/spring-cloud-feign/person-servcie-client/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MicroserviceTopic/microservice-project/spring-cloud-project/spring-cloud-feign/person-servcie-client/target/classes/com/denny/microservice/person/feign/client/SpringCloudFeignClientApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../MicroserviceTopic/microservice-project/spring-cloud-project/spring-cloud-feign/person-servcie-client/target/classes/com/denny/microservice/person/feign/client/SpringCloudFeignClientApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MicroserviceTopic/microservice-project/spring-cloud-project/spring-cloud-feign/person-service-provider/src/main/java/com/denny/microservice/person/feign/service/provider/SpringCloudFeignServiceProviderApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../MicroserviceTopic/microservice-project/spring-cloud-project/spring-cloud-feign/person-service-provider/src/main/java/com/denny/microservice/person/feign/service/provider/SpringCloudFeignServiceProviderApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MicroserviceTopic/microservice-project/spring-cloud-project/spring-cloud-feign/person-service-provider/src/main/java/com/denny/microservice/person/feign/service/provider/controller/PersonServiceProviderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../MicroserviceTopic/microservice-project/spring-cloud-project/spring-cloud-feign/person-service-provider/src/main/java/com/denny/microservice/person/feign/service/provider/controller/PersonServiceProviderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MicroserviceTopic/microservice-project/spring-cloud-project/spring-cloud-feign/person-service-provider/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../MicroserviceTopic/microservice-project/spring-cloud-project/spring-cloud-feign/person-service-provider/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MicroserviceTopic/microservice-project/spring-cloud-project/spring-cloud-feign/person-service-provider/target/classes/com/denny/microservice/person/feign/service/provider/SpringCloudFeignServiceProviderApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../MicroserviceTopic/microservice-project/spring-cloud-project/spring-cloud-feign/person-service-provider/target/classes/com/denny/microservice/person/feign/service/provider/SpringCloudFeignServiceProviderApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MicroserviceTopic/microservice-project/spring-cloud-project/spring-cloud-feign/person-service-provider/target/classes/com/denny/microservice/person/feign/service/provider/controller/PersonServiceProviderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../MicroserviceTopic/microservice-project/spring-cloud-project/spring-cloud-feign/person-service-provider/target/classes/com/denny/microservice/person/feign/service/provider/controller/PersonServiceProviderController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../MicroserviceTopic/microservice-project/spring-cloud-project/spring-cloud-feign/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../MicroserviceTopic/microservice-project/spring-cloud-project/spring-cloud-feign/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,11 +71,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/dubbo-client.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="22" column="40" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
+            <state relative-caret-position="296">
+              <caret line="31" column="27" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/denny/dubbo/impl/ZkHelloMock.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/denny/dubbo/App.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="383">
+              <caret line="31" column="18" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="18" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -75,9 +150,10 @@
     <option name="delegateBuildToMaven" value="true" />
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="30" />
     <option name="y" value="23" />
     <option name="width" value="1280" />
-    <option name="height" value="730" />
+    <option name="height" value="749" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -86,7 +162,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -118,6 +193,25 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dubbo-client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dubbo-client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="denny" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dubbo-client" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dubbo-client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="denny" type="462c0819:PsiDirectoryNode" />
               <item name="dubbo" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -126,6 +220,8 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="denny" type="462c0819:PsiDirectoryNode" />
               <item name="dubbo" type="462c0819:PsiDirectoryNode" />
               <item name="impl" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -140,12 +236,13 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546496156576" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550992630875" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -207,25 +304,29 @@
       <workItem from="1546590317092" duration="310000" />
       <workItem from="1546867103587" duration="9000" />
       <workItem from="1546939922442" duration="2000" />
+      <workItem from="1550983842023" duration="2577000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23502000" />
+    <option name="totallyTimeSpent" value="26079000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="730" extended-state="0" />
+    <frame x="30" y="23" width="1280" height="749" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2819063" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22940226" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Run with VisualVM" />
+      <window_info anchor="bottom" id="Debug with VisualVM" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.36661467" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3652968" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3993808" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -236,7 +337,7 @@
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32507738" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Spring" order="12" />
-      <window_info anchor="bottom" id="Messages" order="13" weight="0.39313573" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.39269406" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24959612" />
@@ -290,17 +391,6 @@
     <entry file="file://$PROJECT_DIR$/dubbo-client.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/denny/dubbo/impl/ZkHelloMock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="8" selection-start-column="8" selection-end-column="28" />
-          <folding>
-            <element signature="e#148#149#0" expanded="true" />
-            <element signature="e#175#176#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/mvn-local/repo/com/alibaba/dubbo/2.6.5/dubbo-2.6.5.jar!/com/alibaba/dubbo/registry/integration/RegistryProtocol.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -322,20 +412,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/denny/dubbo/App.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/dubbo-client.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="296">
+          <caret line="31" column="27" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/dubbo-client.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/denny/dubbo/impl/ZkHelloMock.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="22" column="40" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
+        <state relative-caret-position="90">
+          <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/denny/dubbo/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="31" column="18" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/dubbo-client/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/dubbo-client/src/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/dubbo-server/server-api/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/dubbo-server/server-api/src/test/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/dubbo-server/server-provider/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/dubbo-server/server-provider/src/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/dubbo-client/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/dubbo-server/server-api/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/dubbo-server/server-provider/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

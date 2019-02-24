@@ -20,6 +20,7 @@
         <module>spring-cloud-hystrix-client</module>
         <module>spring-cloud-hystrix-dashboard</module>
         <module>spring-cloud-feign</module>
+        <module>spring-cloud-zuul</module>
     </modules>
 
     <properties>
